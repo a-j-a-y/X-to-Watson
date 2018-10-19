@@ -1,2 +1,3 @@
 # X-to-Watson
 IBM Internship project. A tool to convert X APIs to Watson APIs.
+In initial phase it Converts the Microsoft Azure APIs to Watson APIs. The Microsoft azure request is converted to Watson request, that is, the user send a request which was diverted to Watson instead of Azure. The request is then processed using Watson API and the response is recorded. We convert this response into the Azure response and send to the user.
