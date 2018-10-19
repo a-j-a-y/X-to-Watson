@@ -1,0 +1,73 @@
+<web-app>
+    <display-name>X to Watson Web Application</display-name>
+
+    <servlet>
+        <servlet-name>LanguageTranslator</servlet-name>
+        <servlet-class>com.language.TranslateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LanguageTranslator</servlet-name>
+        <url-pattern>/translate</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>LanguageDetector</servlet-name>
+        <servlet-class>com.language.DetectServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LanguageDetector</servlet-name>
+        <url-pattern>/detect</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>SynthesizeServlet</servlet-name>
+        <servlet-class>com.speech.SynthesizeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SynthesizeServlet</servlet-name>
+        <url-pattern>/synthesize</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>LanguagesServlet</servlet-name>
+        <servlet-class>com.language.LanguagesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LanguagesServlet</servlet-name>
+        <url-pattern>/languages</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>RecognizeServlet</servlet-name>
+        <servlet-class>com.speech.RecognizeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RecognizeServlet</servlet-name>
+        <url-pattern>/recognize</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DetectFaceServlet</servlet-name>
+        <servlet-class>com.vision.DetectFaceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DetectFaceServlet</servlet-name>
+        <url-pattern>/detect_faces</url-pattern>
+    </servlet-mapping>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>securedapp</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+</web-app>
